@@ -46,7 +46,7 @@
                     <td class="text-left p-3 px-5">{{ $book->Publisher }}</td> 
                     <td class="text-left p-3 px-5">{{ $book->Height }}</td>
                     <td class="text-left p-3 px-5">{{ $book->Stock }}</td>
-                    <td class="text-left p-3 px-5 flex justify-end"><button type="button" class="mr-3 text-sm bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline">Edit</button><button type="button" class="text-sm bg-red-500 hover:bg-red-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline">Delete</button></td>
+                    <td class="text-left p-3 px-5 flex justify-end"><button type="button" class="mr-3 text-sm bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline"><a href="/edit/{{ $book-> id }}">Edit</a></button><button type="button" class="text-sm bg-red-500 hover:bg-red-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline"><a href="/delete/{{ $book-> id }}">Delete</a></button></td>
                 </tr>
                 @endforeach
             </tbody>

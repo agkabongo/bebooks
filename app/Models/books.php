@@ -14,6 +14,7 @@ class Books extends Model
         'Title',
         'Author',
         'Genre',
+        'Summary',
         'Height',
         'Publisher',
         'Stock',

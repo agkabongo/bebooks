@@ -33,6 +33,8 @@ Route::get('/catalog/{genre}', [book::class,'filter']);
 Route::get('show/book_id={id}',[book::class,'show']);
 Route::get('create', [book::class, 'create']
 )->middleware(['auth'])->name('create');
-//Route::post('/create',[book::class,'store']);
 Route::post('/create',[book::class,'store']);
+Route::get('/edit/{id}', [book::class,'edit'])->middleware(['auth'])->name('edit');;
+Route::post('/edit/{id}', [book::class,'update']);
+Route::get('/delete/{id}', [book::class,'delete'])->middleware(['auth'])->name('delete');
 

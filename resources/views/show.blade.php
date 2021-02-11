@@ -1,11 +1,13 @@
 @include('layouts.header')
 <body>
 <main>
+<div class="flex flex-col justify-between mx-auto p-8 md:flex-row lg:w-5/6 xl:3/4">
 <button><a href="/catalog">Retour</a></button>
+</div>
+
 <section class=" bg-white text-gray-900">
   
-        
-  <!-- SECTION: eCommerce -->
+
   <div
     class="flex flex-col justify-between mx-auto p-8 md:flex-row lg:w-5/6 xl:3/4"
   >
@@ -18,25 +20,7 @@
         alt=""
       />
       <!-- !SECTION: Main Image -->
-      <!-- SECTION: Other Images -->
-      <div class="flex w-full p-4 justify-around">
-        <img
-          class="rounded-md object-cover w-1/3 mx-2"
-          src="https://images.unsplash.com/photo-1512446816042-444d641267d4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
-          alt=""
-        />
-        <img
-          class="rounded-md object-cover w-1/3 mx-2"
-          src="https://images.unsplash.com/photo-1512446387219-99c19f8fe95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1789&q=80"
-          alt=""
-        />
-        <img
-          class="rounded-md object-cover w-1/3 mx-2"
-          src="https://images.unsplash.com/photo-1544451256-d79e9e199fa8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1934&q=80"
-          alt=""
-        />
-      </div>
-      <!-- !SECTION: Other Images -->
+    
     </div>
     <!-- !SECTION: Image Gallery -->
     <!-- SECTION: Product -->
@@ -44,22 +28,18 @@
       class="flex flex-col h-full justify-evenly px-8 items-center md:w-1/2 md:mx-2"
     >
       <!-- SECTION: Product Title -->
-      <h1 class="text-3xl text-center md:text-5xl leading-none font-semibold">
+      <h1 class="text-2xl text-center md:text-3xl leading-none font-semibold">
       {{ $books[0]->Title }}
       </h1>
       <!-- !SECTION: Product Title -->
       <!-- SECTION: Product Subtitle -->
-      <h2 class="text-2xl font-light text-center mb-4">
+      <h2 class="text-1xl font-light text-center mb-4">
       by {{ $books[0]->Author }}
       </h2>
       <!-- !SECTION: Product Subtitle -->
       <!-- SECTION: Product Description -->
       <p class="text-justify">
-        Sequi excepturi sint sunt error vero a explicabo cumque officiis quod
-        quis! Eum illum qui harum, eaque laboriosam est eveniet amet, eos quasi
-        recusandae perferendis rem non, veritatis ea tempora aliquid fugit? Odio
-        tempore sit vitae voluptatem quo consequuntur illum dolor velit. Animi,
-        quia.
+      {{ $books[0]->Summary}}
       </p>
       <!-- !SECTION: Product Description -->
       <!-- SECTION: Features -->
@@ -85,12 +65,16 @@
             Rent
           </button>
         </div>
-        <!-- !SECTION: Add to cart -->
+      
       </div>
     </div>
-    <!-- !SECTION: Product -->
+  
   </div>
-  <!-- !SECTION: eCommerce -->
+  <div class="flex flex-col justify-between mx-auto p-8 md:flex-row lg:w-5/6 xl:3/4">
+  <h1 class="text-2xl text-center md:text-3xl leading-none font-semibold">
+      You may also like
+      </h1>
+  </div>
     
       
 </section>

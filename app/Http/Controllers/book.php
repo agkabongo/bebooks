@@ -26,6 +26,7 @@ class book extends Controller
             'Title' => $request->title,
             'Author'  => $request->author,
             'Genre' => $request->genre,
+            'Summary' => $request->summary,
             'Height'=>$request->height,
             'Publisher'=>$request->publisher,
             'Stock' => $request->stock, 
@@ -35,9 +36,37 @@ class book extends Controller
         ->with('success', 'Book created successfully.');
     }
 
-    public function edit(){}
-    public function update(){}
-    public function delete(){}
+    public function edit(Request $request){
+        $book_id = $request -> id;
+        $books=Books::where('id','=',$book_id)->get();
+        return view('edit', compact('books'));
+    }
+
+    public function update(Request $request){
+        $book_id = $request -> id;
+        $request->validate([
+
+            'title' => 'required',
+            'author'  => 'required',
+            'genre' => 'required',
+            'height'=>'required',
+            'publisher'=>'required',
+            'stock' => 'required'
+
+        ]);
+       $books = Books::where('id','=',$book_id)->update($request->except(['_token']));
+        return redirect('/dashboard')
+        ->with('success', 'Book updated successfully.');
+    }
+
+
+    public function delete(Request $request){
+     $book_id = $request -> id;
+     $books= Books::where('id','=',$book_id)->delete();
+     return redirect('/dashboard')
+        ->with('success', 'Book deleted successfully.');
+    }
+    
 
     public function recent()
     {

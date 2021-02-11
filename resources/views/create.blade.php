@@ -38,7 +38,7 @@
                                 </div>
                             </div>
                             <div class=" flex flex-col mx-3 my-8">
-                                <textarea name="summary" id="" cols="30" rows="10" placeholder="Summary"></textarea>
+                                <textarea name="summary" id="summary" cols="30" rows="10" placeholder="Summary"></textarea>
                             </div>
 
                             <div class="container flex justify-center my-10">
