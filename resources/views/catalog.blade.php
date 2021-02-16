@@ -32,6 +32,9 @@
    @foreach ($books as $book)     
     <div class=" lg:w-1/4 sm:w-1/2 md:w-1/3 min-h-20 mb-4 px-1">
       <div class="relative bg-white rounded border">
+      <picture class="block bg-gray-200 border-b">
+          <img class="object-cover" src="https://picsum.photos/id/{{$book->id+8}}/300" title="Card {{$book->id}}">
+        </picture>
         <div class="p-4">
           <h3 class="text-lg font-bold">
             <a class="stretched-link" href="/show/book_id={{ $book->id }}" title="show">

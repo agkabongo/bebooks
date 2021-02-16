@@ -14,7 +14,7 @@
     </div>
     <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
       
-      <div style="background-image: url('https://tailwind.build/placeholders/pictures/office.jpg')"></div>
+      <div style="background-image: url('https://i.picsum.photos/id/24/4855/1803.jpg?hmac=ICVhP1pUXDLXaTkgwDJinSUS59UWalMxf4SOIWb9Ui4')" class="bg-cover h-80 min-h-50"></div>
     </div>
   </div>
 </section>
@@ -35,7 +35,7 @@
     <div class=" lg:w-1/4 sm:w-1/2 md:w-1/3 min-h-8 mb-4 px-2">
       <div class="relative bg-white rounded border">
         <picture class="block bg-gray-200 border-b">
-          <img class="block" src="https://via.placeholder.com/800x600/EDF2F7/E2E8F0/&amp;text=Card" alt="Card 1">
+          <img class="object-cover" src="https://picsum.photos/id/{{$book->id+8}}/300" title="Card {{$book->id}}">
         </picture>
         <div class="p-4">
           <h3 class="text-lg font-bold">
